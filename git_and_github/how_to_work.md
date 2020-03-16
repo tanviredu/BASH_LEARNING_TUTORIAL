@@ -95,6 +95,16 @@ git status
 git add .
 
 
+#### now if you make mistke this point
+#### you can undo this too
+
+git reset --soft HEAD~
+
+
+### see the git status
+
+git status
+
 
 
 
