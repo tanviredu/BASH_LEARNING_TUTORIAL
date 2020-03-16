@@ -364,3 +364,104 @@ git commit -m "resolved conflict"
 
 
 ##########github#######################
+
+
+
+### to connect the local git with github
+### first make a account in github
+### make a public and private [your choice]
+### there are also gitlab,bitbucket
+### does the same thing
+
+
+
+
+###now go to your lcoal repo
+
+## and use this command 
+
+git remote
+
+
+### nothing will be showed becuse you did not add any remote url
+### now add the url
+git remote add origin https:/github.com/test/test.git
+
+## now see the remote again
+
+git remote
+
+
+### now push it to the github online repo
+
+
+git push -u origin master
+
+#### change the readme.txt to the readme.md
+### and stage it commit it and push it
+
+git add -A
+git commit -m "changes made"
+git push -u origin master
+
+
+
+##### then you will see in the github that the readme.md file
+### is showed in the repo
+
+
+
+### lets go to the branch and then merge it to the master
+### and then update it
+
+git checkout <update_branch>
+
+
+### and then merge it
+
+git merge master
+
+### so we make this branch
+
+git add -A
+git commit -m "added"
+
+
+## suppose one person made a changes in the same branch
+## and you use the same branch and you try to push
+## it you can't do that
+## git will force you to pull first from the repo
+
+git pull
+
+
+
+
+#### forking
+
+### suppose you want to take another persons code
+### and try to work on it and you want it on your repository
+### then there is a button to fork this repo
+### by pressing this fork button you will
+### make a copy i your account
+## there are stps
+### first you have to clone the repo
+
+git clone https://github.com/yourusername/test.git
+
+cd test
+
+
+## now check the remote
+
+git remote -v
+
+
+
+## now you can make the changes then you can 
+## stage it and then commit and then push it
+
+
+git add -A
+git commit -m 'added'
+git push -u origin master
