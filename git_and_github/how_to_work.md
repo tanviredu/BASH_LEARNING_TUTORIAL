@@ -157,5 +157,210 @@ echo "images/" >> .gitignore
 
 ### after that this file will no longer will be tracked
 
+#### branching in one of the most powerfull feature.creating a 
+#### different . Creating different git branch allow you to work on a 
+#### perticular feature or a set of files from the "copy" of the repository
+#### this will allow you to work you and your friend in two different parts
+#### of the same file.and then git will help you to 
+#### merge the two file
+
+## you can list all the avilabe branch with this command
+
+git branch
+
+### to add a branch this command is used
+
+###
+
+git branch <branch_name>
 
 
+
+## lets enter the command agin to become sure
+
+git branch
+
+### you can make this to your current branch
+
+
+## if we want to see which branch he is on
+
+git status
+
+
+### if you want to make the new branch out current branch
+
+git checkout <new_branch>
+
+
+### if you want to go the master branch
+
+
+git checkout master
+
+
+### now check again
+
+git branch
+
+
+### 
+
+
+git status
+
+
+
+### if you want to delete a branch you can do it with
+### this command
+
+
+git branch -d <branch_name
+
+
+
+### we can create a new branch and checkout at the same time
+
+git branch -b <branch_name>
+
+
+
+
+## now lets add some text in this new branch
+
+echo "this is a new branch" >> readme.md
+
+
+
+####lets see the  file
+
+cat readme.file
+
+
+
+
+
+### now add everything
+
+git add -A
+
+git commit -m "added third line "
+
+
+### now after the commit if we go to the master branch
+
+git checkout master
+
+
+##### you waill see that the chnges is now making in the master
+
+
+
+### now if you go to the branch again
+
+git checkout <previous_branch>
+
+### you will see that the third line is back
+
+
+
+#### now add a new line again and then stage and commit
+
+
+echo "this is the fourth line" >> readme.md
+
+git add -A
+git commit -m "added fourth line"
+
+
+### now if you want to merge with the master branch
+
+### first you have to go to the master branch
+
+git checkout master
+
+git merge <another_branch>
+
+
+
+
+### now if you see the master then 
+
+### then you see the changes is affected in the master branch
+
+
+
+
+### but what happend if two people work on the same content
+### you changes it then another person changes
+
+
+git checkout update_branch
+vim readme.md
+
+##add a line
+##"its sunny today"
+
+cat readme.md
+
+
+### now stage it and commit it
+git add -A
+git commit -m "changed to sunny"
+
+
+### going to master
+
+git checkout master
+vim readme.md
+
+### changes the file to sunny to rainy
+### in the fourth line
+
+## "its a rainy day"
+
+## now stage it and commit  it
+
+git add -A
+git commit -m "changes sunny to rainy"
+
+
+## now how to merge it ????
+
+git merge <updatebranch>
+
+## it will show a conflict becausetwo different people
+## has change it two different way
+
+
+### how to solve it
+
+
+### now if you apply yhis command
+
+git status 
+
+## it will tell you there is a conflict
+
+
+### you have to manually
+### changes the file
+
+
+vim readme.md
+
+
+### then check the file and change the conflict
+
+
+### now you can stage and commit it
+
+git add -A
+git commit -m "resolved conflict"
+
+
+
+
+
+
+##########github#######################
