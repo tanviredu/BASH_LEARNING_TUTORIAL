@@ -107,5 +107,55 @@ git status
 
 
 
+#### suupose you want to know al the commit information
+#### and who did it
+
+git log
+
+
+### git can also show you the change with your 
+### staged file and your current unstage file
+
+git diff <filename>
+
+#### now suppose you staged the change 
+#### and now but you want to go to the last commit
+#### and stable version
+git checkout readme.txt
+
+
+### it will revert all the changes and take you to the last
+
+##it will automatically change the code in your file to the last commit
+
+## you check with this command or any editor
+
+cat readme.txt
+
+
+
+
+
+
+### suppose there are some file
+### maybe some uploded picture 
+### or many auth infomation
+### or any file in a folder that you dont
+### want to be tracked by git
+### then the we can specify in the ".gitignore" file
+
+## if we try to avoid any jpg image
+then 
+echo "*.jpg" > .gitignore
+
+###if you want to remove any folder
+###then you can add the folder name
+
+echo "images/" >> .gitignore
+
+
+
+### after that this file will no longer will be tracked
+
 
 
